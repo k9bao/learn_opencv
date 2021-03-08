@@ -5,8 +5,8 @@
 using namespace cv;
 Mat src, dst, map_x, map_y;
 const char *OUTPUT_TITLE = "remap demo";
-int index = 0;
-void update_map(void);
+
+void update_map(int);
 int main(int argc, char **argv) {
     src = imread("test.jpg");
     if (!src.data) {
@@ -22,13 +22,14 @@ int main(int argc, char **argv) {
     map_y.create(src.size(), CV_32FC1);
 
     int c = 0;
+    int index = 0;
     while (true) {
         c = waitKey(500);
         if ((char)c == 27) {
             break;
         }
         index = c % 4;
-        update_map();
+        update_map(index);
         remap(src, dst, map_x, map_y, INTER_LINEAR, BORDER_CONSTANT, Scalar(0, 255, 255));
         imshow(OUTPUT_TITLE, dst);
     }
@@ -36,7 +37,7 @@ int main(int argc, char **argv) {
     return 0;
 }
 
-void update_map(void) {
+void update_map(int index) {
     for (int row = 0; row < src.rows; row++) {
         for (int col = 0; col < src.cols; col++) {
             switch (index) {

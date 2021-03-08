@@ -63,5 +63,5 @@ if __name__ == "__main__":
                 target, '${CV_INCLUDE_DIRS}'))
             f.write('target_link_directories({} PRIVATE {})\n'.format(
                 target, '${CV_LIBRARY_DIRS}'))
-            f.write('target_link_libraries({} PRIVATE {}\n\n'.format(
+            f.write('target_link_libraries({} PRIVATE {})\n\n'.format(
                 target, '${CV_LIBRARIES}'))

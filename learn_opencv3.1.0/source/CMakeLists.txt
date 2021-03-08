@@ -2,6 +2,8 @@ cmake_minimum_required(VERSION 3.10)
 
 project(opencv_demo)
 
+add_definitions(-std=c++11)
+
 include(tools/helper.cmake)
 
 # include_directories(/usr/local/include)
