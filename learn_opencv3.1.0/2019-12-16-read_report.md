@@ -8,102 +8,46 @@ tag: OpenCV3.1.0学习
 ---
 
 - [1. 1.OPENCV3.1的API介绍](#1-1opencv31的api介绍)
-  - [1.1. 常用API及结构体](#11-常用api及结构体)
-    - [1.1.1. Mat类](#111-mat类)
-    - [1.1.2. Scalar类](#112-scalar类)
-    - [1.1.3. 图像读写显示API](#113-图像读写显示api)
-    - [1.1.4. other](#114-other)
-  - [1.2. 1.2.ppt讲解](#12-12ppt讲解)
-    - [1.2.1. pptx概述](#121-pptx概述)
-    - [1.2.2. pptx 基本演示](#122-pptx-基本演示)
-    - [1.2.3. pptx 掩膜操作](#123-pptx-掩膜操作)
-    - [1.2.4. pptx Mat对象](#124-pptx-mat对象)
-    - [1.2.5. pptx 图像操作](#125-pptx-图像操作)
-    - [1.2.6. pptx 图像混合](#126-pptx-图像混合)
-    - [1.2.7. pptx 亮度与对比度](#127-pptx-亮度与对比度)
-    - [1.2.8. pptx 绘制形状与文字](#128-pptx-绘制形状与文字)
-    - [1.2.9. pptx 均值+高斯](#129-pptx-均值高斯)
-    - [1.2.10. pptx 中值+高斯双边](#1210-pptx-中值高斯双边)
-    - [1.2.11. pptx 膨胀与腐蚀](#1211-pptx-膨胀与腐蚀)
-    - [1.2.12. pptx 形态学操作](#1212-pptx-形态学操作)
-    - [1.2.13. pptx 提取水平与垂直线](#1213-pptx-提取水平与垂直线)
-    - [1.2.14. pptx 上采样和降采样](#1214-pptx-上采样和降采样)
-    - [1.2.15. pptx 基本阈yu值操作](#1215-pptx-基本阈yu值操作)
-    - [1.2.16. pptx 自定义线性滤波](#1216-pptx-自定义线性滤波)
-    - [1.2.17. pptx 卷积边缘](#1217-pptx-卷积边缘)
-    - [1.2.18. pptx Sobel算子](#1218-pptx-sobel算子)
-    - [1.2.19. pptx Laplance算子](#1219-pptx-laplance算子)
-    - [1.2.20. pptx](#1220-pptx)
-    - [1.2.21. pptx](#1221-pptx)
-    - [1.2.22. pptx](#1222-pptx)
-    - [1.2.23. pptx](#1223-pptx)
-    - [1.2.24. pptx](#1224-pptx)
-    - [1.2.25. pptx](#1225-pptx)
-    - [1.2.26. pptx](#1226-pptx)
-    - [1.2.27. pptx](#1227-pptx)
-    - [1.2.28. pptx](#1228-pptx)
-    - [1.2.29. pptx](#1229-pptx)
-    - [1.2.30. pptx](#1230-pptx)
-    - [1.2.31. pptx](#1231-pptx)
-    - [1.2.32. pptx](#1232-pptx)
-    - [1.2.33. pptx](#1233-pptx)
-    - [1.2.34. pptx](#1234-pptx)
+  - [1.2.1. pptx概述](#121-pptx概述)
+  - [1.2.2. 基本演示](#122-基本演示)
+  - [1.2.3. 掩膜操作](#123-掩膜操作)
+  - [1.2.4. Mat对象](#124-mat对象)
+  - [1.2.5. 图像操作](#125-图像操作)
+  - [1.2.6. 图像混合](#126-图像混合)
+  - [1.2.7. 亮度与对比度](#127-亮度与对比度)
+  - [1.2.8. 绘制形状与文字](#128-绘制形状与文字)
+  - [1.2.9. 均值+高斯](#129-均值高斯)
+  - [1.2.10. 中值+高斯双边](#1210-中值高斯双边)
+  - [1.2.11. 膨胀与腐蚀](#1211-膨胀与腐蚀)
+  - [1.2.12. 形态学操作](#1212-形态学操作)
+  - [1.2.13. 提取水平与垂直线](#1213-提取水平与垂直线)
+  - [1.2.14. 上采样和降采样](#1214-上采样和降采样)
+  - [1.2.15. 基本阈yu值操作](#1215-基本阈yu值操作)
+  - [1.2.16. 自定义线性滤波](#1216-自定义线性滤波)
+  - [1.2.17. 卷积边缘](#1217-卷积边缘)
+  - [1.2.18. Sobel算子](#1218-sobel算子)
+  - [1.2.19. Laplance算子](#1219-laplance算子)
+  - [1.2.20.](#1220)
+  - [1.2.21.](#1221)
+  - [1.2.22.](#1222)
+  - [1.2.23.](#1223)
+  - [1.2.24.](#1224)
+  - [1.2.25.](#1225)
+  - [1.2.26.](#1226)
+  - [1.2.27.](#1227)
+  - [1.2.28.](#1228)
+  - [1.2.29.](#1229)
+  - [1.2.30.](#1230)
+  - [1.2.31.](#1231)
+  - [1.2.32.](#1232)
+  - [1.2.33.](#1233)
+  - [1.2.34.](#1234)
 
 # 1. 1.OPENCV3.1的API介绍
 
-## 1.1. 常用API及结构体
-
 基于版本OpenCV3.1.0学习
 
-### 1.1.1. Mat类
-
-- 说明: 存储图片数据的结构体, 默认存储格式都是bgr//变量
-- rows:行,对应图片height
-- cols:列,对应图片的width, 图片width=image.cols*channels()
-
-//方法
-
-- Mat(int rows, int cols, int type, const Scalar& s);//Mat M(2,2,CV_8UC3, Scalar(0,0,255))    其中前两个参数分别表示行(row)跟列(column)、第三个CV_8UC3中的8表示每个通道占8位、U表示无符号、C表示Char类型、3表示通道数目是3, 第四个参数是向量表示初始化每个像素值是多少, 向量长度对应通道数目一致
-- void copyTo( OutputArray m ) const;//拷贝到目标Mat:OutputArray中
-- int Mat::channels() const通道数
-- bool Mat::isContinuous() const; Mat的存储空间是否连续[OpenCV isContinuous()连续存储的问题](https://blog.csdn.net/guyuealian/article/details/78614662)
-
-```C++
-    // 获取图像宽、高
-    int channels = image.channels();
-    int rows = image.rows;
-    int cols = image.cols * channels;
-    if (image.isContinuous()) {
-        cols *= rows;         
-        rows = 1;
-    }
-```
-
-- Mat::ptr(...); 取具体数据的指针, 可以是一维或者多维,[参考](https://blog.csdn.net/qq_33485434/article/details/78962040)
-
-### 1.1.2. Scalar类
-
-颜色类
-
-### 1.1.3. 图像读写显示API
-
-- void namedWindow(const String& winname, int flags = WINDOW_AUTOSIZE);创建一个窗口, winname唯一标识,可以使用destroyWindow销毁,如果多个操作使用同一个窗口, 需要调用此函数创建
-- void imshow(const String& winname, InputArray mat);显示图片到指定窗口, 如果窗口没有创建, 会自动创建
-- int waitKey(int delay = 0);等待用户输入, 参数单位毫秒, 0标识一直等待
-- void destroyWindow(const String& winname);销毁namedWindow创建的窗口
-- Mat imread( const String& filename, int flags = IMREAD_COLOR );读图片文件, 支持jpg,bmp,png等, 可以读取灰度图或3通道图
-- bool imwrite( const String& filename, InputArray img, const std::vector<int>& params = std::vector<int>());写图片文件
-
-### 1.1.4. other
-
-- void convertTo(OutputArray dst, int rtype, double alpha, double beta, Stream& stream) const;//通过alpha和beta因子计算出目标图像, dst(x,y)=src(x,y)*alpha - beta
-- void minMaxLoc(InputArray src, CV_OUT double* minVal,
-                            CV_OUT double* maxVal = 0, CV_OUT Point* minLoc = 0,
-                            CV_OUT Point* maxLoc = 0, InputArray mask = noArray());获取图像的最大值和最小值(也可以获取局部最大最小值)
-
-## 1.2. 1.2.ppt讲解
-
-### 1.2.1. pptx概述
+## 1.2.1. pptx概述
 
 - 说明: 概述, 介绍什么是OpenCV, OpenCV是计算机视觉开源库, 主要算法涉及图像处理和机器学习相关方法, 是Intel公司贡献出来的, 俄罗斯工程师贡献大部分C/C++带代码。
 - HighGUI部分
@@ -115,17 +59,20 @@ tag: OpenCV3.1.0学习
 - Machine Learning
 - GPU加速
 
-### 1.2.2. pptx 基本演示
+## 1.2.2. 基本演示
 
-- 说明: 基本演示, 主要使用三个函数: 加载图像（用cv::imread）, 修改图像 (cv::cvtColor), 保存图像(cv::imwrite)
-   读取图片, 然后图片取反, 输出。
-   代码: main-001.c
+- 说明: 基本演示, 主要使用三个函数
+  - 加载图像（用cv::imread）
+  - 修改图像 (cv::cvtColor)
+  - 保存图像(cv::imwrite)
+  - 读取图片, 然后图片值与255取反, 输出。
+  - 代码: chapter_001.cpp
 
-### 1.2.3. pptx 掩膜操作
+## 1.2.3. 掩膜操作
 
-- 说明: 掩膜操作, 指针ptr及filter2D进行掩膜操作
+- 说明: 掩膜操作, 指针ptr及`filter2D`进行掩膜操作
 - 读取图片, 对图片做掩膜操作, 然后输出。
-- 掩膜的本质就是使用kernel矩阵, 对原始矩阵进行求和, 结果作为锚的输出。
+- 掩膜的本质就是使用`kernel`矩阵, 对原始矩阵进行求和, 结果作为锚的输出。
 - void filter2D( InputArray src, OutputArray dst, int ddepth,
                                InputArray kernel, Point anchor = Point(-1,-1),
                                double delta = 0, int borderType = BORDER_DEFAULT );进行掩膜操作
@@ -133,35 +80,35 @@ tag: OpenCV3.1.0学习
                             int dx, int dy, int ksize = 3,
                             double scale = 1, double delta = 0,
                             int borderType = BORDER_DEFAULT );//索贝尔方法, 一种常用的边缘检测算子, 是一阶的梯度算法。对噪声具有平滑作用, 提供较为精确的边缘方向信息, 边缘定位精度不够高。当对精度要求不是很高时, 是一种较为常用的边缘检测方法。
-    代码: main-002.c/main-003.c/main-004.c
+    代码: chapter_002.cpp/chapter_003.cpp/chapter_004.cpp
 
-### 1.2.4. pptx Mat对象
+## 1.2.4. Mat对象
 
 - 说明: Mat对象
 - void cvtColor( InputArray src, OutputArray dst, int code, int dstCn = 0 );  
 - MatExpr eye(int rows, int cols, int type);创建单位矩阵
-   代码: main-004.c
+   代码: chapter_004.cpp
 
-### 1.2.5. pptx 图像操作
+## 1.2.5. 图像操作
 
 - 说明: 图像操作, 修改某一个像素值。
 - 图片的颜色空间变换演示
-   代码: main-005.c
+   代码: chapter_005.cpp
 
-### 1.2.6. pptx 图像混合
+## 1.2.6. 图像混合
 
 - 说明: 图像混合
 - void addWeighted(InputArray src1, double alpha, InputArray src2,
                               double beta, double gamma, OutputArray dst, int dtype = -1);二张图像混合
-   代码: main-006.c
+   代码: chapter_006.cpp
 
-### 1.2.7. pptx 亮度与对比度
+## 1.2.7. 亮度与对比度
 
 - 说明: 亮度与对比度,通过修改像素值来体现
 - MatExpr zeros(Size size, int type);//初始化0值矩阵
-   代码: main-007.c
+   代码: chapter_007.cpp
 
-### 1.2.8. pptx 绘制形状与文字
+## 1.2.8. 绘制形状与文字
 
 - 说明: 绘制形状与文字
 - 画线 cv::line （LINE_4\LINE_8\LINE_AA）
@@ -169,9 +116,9 @@ tag: OpenCV3.1.0学习
 - 画矩形cv::rectangle
 - 画圆cv::circle
 - 画填充cv::fillPoly
-   代码: main-008.c/main-009.c
+   代码: chapter_008.cpp/chapter_009.cpp
 
-### 1.2.9. pptx 均值+高斯
+## 1.2.9. 均值+高斯
 
 - 说明: 均值模糊+高斯模糊
 - 模糊原理, 卷积计算, 线性滤波Smooth/Blur(均值模糊blur/高斯模糊GaussianBlur)
@@ -181,9 +128,9 @@ tag: OpenCV3.1.0学习
 - void GaussianBlur( InputArray src, OutputArray dst, Size ksize,
                                 double sigmaX, double sigmaY = 0,
                                 int borderType = BORDER_DEFAULT );//高斯模糊
-    代码: main-010.c
+    代码: chapter_010.cpp
 
-### 1.2.10. pptx 中值+高斯双边
+## 1.2.10. 中值+高斯双边
 
 - 说明: 中值模糊+高斯双边模糊, 中值对椒盐噪声有很好的抑制作用
 - 中值模糊medianBlur+双边模糊bilateralFilter
@@ -194,9 +141,9 @@ tag: OpenCV3.1.0学习
 - 均值模糊无法克服边缘像素信息丢失缺陷。原因是均值滤波是基于平均权重
 - 高斯模糊部分克服了该缺陷, 但是无法完全避免, 因为没有考虑像素值的不同
 - 高斯双边模糊 – 是边缘保留的滤波方法, 避免了边缘信息丢失, 保留了图像轮廓不变
-    代码: main-011.c
+    代码: chapter_011.cpp
 
-### 1.2.11. pptx 膨胀与腐蚀
+## 1.2.11. 膨胀与腐蚀
 
 - 说明: 膨胀与腐蚀, 形态学基本操作
 - 膨胀: 跟卷积操作类似, 假设有图像A和结构元素B, 结构元素B在A上面移动, 其中B定义其中心为锚点, 计算B覆盖下A的最大像素值用来替换锚点的像素, 其中B作为结构体可以是任意形状
@@ -210,9 +157,9 @@ tag: OpenCV3.1.0学习
                          Point anchor = Point(-1,-1), int iterations = 1,
                          int borderType = BORDER_CONSTANT,
                          const Scalar& borderValue = morphologyDefaultBorderValue() );腐蚀
-    代码: main-012.c
+    代码: chapter_012.cpp
 
-### 1.2.12. pptx 形态学操作
+## 1.2.12. 形态学操作
 
 - 说明: 形态学操作, 包括: 开, 闭, 梯度, 顶帽, 黑帽等
 - 开操作- open, 先腐蚀后膨胀, 可以去掉小的对象, 开就是开除的意思
@@ -225,9 +172,9 @@ tag: OpenCV3.1.0学习
                                 Point anchor = Point(-1,-1), int iterations = 1,
                                 int borderType = BORDER_CONSTANT,
                                 const Scalar& borderValue = morphologyDefaultBorderValue() );其中op: CV_MOP_OPEN/ CV_MOP_CLOSE/ CV_MOP_GRADIENT / CV_MOP_TOPHAT/ CV_MOP_BLACKHAT 形态学操作类型
-    代码: main-013.c
+    代码: chapter_013.cpp
 
-### 1.2.13. pptx 提取水平与垂直线
+## 1.2.13. 提取水平与垂直线
 
 - 说明: 形态学操作应用-提取水平与垂直线
 - 输入图像彩色图像 imread
@@ -235,7 +182,7 @@ tag: OpenCV3.1.0学习
 - 转换为二值图像 – adaptiveThreshold
 - 定义结构元素
 - 开操作 （腐蚀+膨胀）提取 水平与垂直线
-- Mat hline = getStructuringElement(MORPH_RECT, Size(src.cols / 16, 1), Point(-1, -1));// 水平结构元素
+- Mat hline = getStructuringElement(MORPH_RECT, Size(src.cppols / 16, 1), Point(-1, -1));// 水平结构元素
   - Mat vline = getStructuringElement(MORPH_RECT, Size(1, src.rows / 16), Point(-1, -1));// 垂直结构元素
   - Mat kernel = getStructuringElement(MORPH_RECT, Size(3, 3), Point(-1, -1));// 矩形结构
 - void bitwise_not(InputArray src, OutputArray dst,
@@ -243,9 +190,9 @@ tag: OpenCV3.1.0学习
 - void adaptiveThreshold( InputArray src, OutputArray dst,
                                      double maxValue, int adaptiveMethod,
                                      int thresholdType, int blockSize, double C );//转换为二值图像 
-    代码: main-014.c
+    代码: chapter_014.cpp
 
-### 1.2.14. pptx 上采样和降采样
+## 1.2.14. 上采样和降采样
 
 - 说明: 图像上采样和降采样
 - 一个图像金字塔是一系列的图像组合, 最底下一张是图像尺寸最大, 最上方的图像尺寸最小, 从空间上从上向下看就想一个古代的金字塔。
@@ -258,9 +205,9 @@ tag: OpenCV3.1.0学习
                            InputArray mask = noArray(), int dtype = -1);//取差值
 - void normalize( InputArray src, InputOutputArray dst, double alpha = 1, double beta = 0,
                              int norm_type = NORM_L2, int dtype = -1, InputArray mask = noArray());//归一化
-- 代码: main-015.c
+- 代码: chapter_015.cpp
 
-### 1.2.15. pptx 基本阈yu值操作
+## 1.2.15. 基本阈yu值操作
 
 - 说明: 基本阈yu值操作
 - 阈值二值化    THRESH_BINARY        if f(x,y)>thresh,f(x,y)=maxval else f(x,y)=0
@@ -270,9 +217,9 @@ tag: OpenCV3.1.0学习
 - 阈值反取零    THRESH_TOZERO_INV   if f(x,y)>thresh,f(x,y)=0 else f(x,y)=f(x,y)
   - double threshold( InputArray src, OutputArray dst,
                                double thresh, double maxval, int type );//type=THRESH_BINARY...,thresh
-    代码: main-016.c
+    代码: chapter_016.cpp
 
-### 1.2.16. pptx 自定义线性滤波
+## 1.2.16. 自定义线性滤波
 
 - 说明: 自定义线性滤波
 - Kernel: 本质上一个固定大小的矩阵数组, 其中心点称为锚点(anchor point),kernel就是可以自定义的卷积核
@@ -291,9 +238,9 @@ tag: OpenCV3.1.0学习
 - 截断            THRESH_TRUNC        if f(x,y)>thresh,f(x,y)=thresh else f(x,y)=f(x,y)
 - 阈值取零        THRESH_TOZERO        if f(x,y)>thresh,f(x,y)=f(x,y) else f(x,y)=0
 - 阈值反取零    THRESH_TOZERO_INV   if f(x,y)>thresh,f(x,y)=0 else f(x,y)=f(x,y)
-    代码: main-017.c
+    代码: chapter_017.cpp
 
-### 1.2.17. pptx 卷积边缘
+## 1.2.17. 卷积边缘
 
 - 说明: 卷积处理边缘
 - 图像卷积的时候边界像素, 不能被卷积操作, 原因在于边界像素没有完全跟kernel重叠, 所以当3x3滤波时候有1个像素的边缘没有被处理, 5x5滤波的时候有2个像素的边缘没有被处理。
@@ -307,9 +254,9 @@ tag: OpenCV3.1.0学习
 - void copyMakeBorder(InputArray src, OutputArray dst,
                                  int top, int bottom, int left, int right,
                                  int borderType, const Scalar& value = Scalar() );
-    代码: main-018.c
+    代码: chapter_018.cpp
 
-### 1.2.18. pptx Sobel算子
+## 1.2.18. Sobel算子
 
 - 说明: Sobel算子, 卷积应用-图像边缘提取
 - 边缘是什么 – 是像素值发生跃迁的地方, 是图像的显著特征之一, 在图像特征提取、对象检测、模式识别等方面都有重要的作用。
@@ -329,9 +276,9 @@ tag: OpenCV3.1.0学习
 - cvtColor( src,  gray, COLOR_RGB2GRAY );
 - addWeighted( A, 0.5,B, 0.5, 0, AB);
 - convertScaleAbs(A, B)// 计算图像A的像素绝对值, 输出到图像B
-    代码: main-019.c 
+    代码: chapter_019.cpp 
 
-### 1.2.19. pptx Laplance算子
+## 1.2.19. Laplance算子
 
 - 说明: Laplance算子,在二阶导数的时候, 最大变化处的值为零即边缘是零值。通过二阶导数计算, 依据此理论我们可以计算图像二阶导数, 提取边缘。
 - 拉普拉斯算子(Laplance operator)->cv::Laplacian
@@ -341,32 +288,32 @@ tag: OpenCV3.1.0学习
   - 拉普拉斯 – 二阶导数计算Laplacian()
   - 取绝对值convertScaleAbs()
 
-### 1.2.20. pptx 
+## 1.2.20. 
 
-### 1.2.21. pptx 
+## 1.2.21. 
 
-### 1.2.22. pptx 
+## 1.2.22. 
 
-### 1.2.23. pptx 
+## 1.2.23. 
 
-### 1.2.24. pptx 
+## 1.2.24. 
 
-### 1.2.25. pptx 
+## 1.2.25. 
 
-### 1.2.26. pptx 
+## 1.2.26. 
 
-### 1.2.27. pptx 
+## 1.2.27. 
 
-### 1.2.28. pptx 
+## 1.2.28. 
 
-### 1.2.29. pptx 
+## 1.2.29. 
 
-### 1.2.30. pptx 
+## 1.2.30. 
 
-### 1.2.31. pptx 
+## 1.2.31. 
 
-### 1.2.32. pptx 
+## 1.2.32. 
 
-### 1.2.33. pptx 
+## 1.2.33. 
 
-### 1.2.34. pptx 
+## 1.2.34. 

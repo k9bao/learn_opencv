@@ -1,3 +1,4 @@
+#include "data.h"
 #include <iostream>
 #include <math.h>
 #include <opencv2/opencv.hpp>
@@ -11,7 +12,7 @@ int type_max = 4;
 const char *output_title = "binary image";
 void Threshold_Demo(int, void *);
 int main(int argc, char **argv) {
-    src = imread("test.jpg");
+    src = imread(TEST1_JPG);
     if (!src.data) {
         printf("could not load image...\n");
         return -1;

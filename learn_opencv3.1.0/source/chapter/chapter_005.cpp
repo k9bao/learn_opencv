@@ -1,3 +1,4 @@
+#include "data.h"
 #include <iostream>
 #include <opencv2/core/core.hpp>
 #include <opencv2/highgui/highgui.hpp>
@@ -7,7 +8,7 @@
 using namespace cv;
 using namespace std;
 int main(int argc, char **args) {
-    Mat image = imread("test.jpg", IMREAD_COLOR);
+    Mat image = imread(TEST1_JPG, IMREAD_COLOR);
     if (image.empty()) {
         cout << "could not find the image resource..." << std::endl;
         return -1;

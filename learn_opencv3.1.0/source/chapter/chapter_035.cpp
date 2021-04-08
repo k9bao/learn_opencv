@@ -1,3 +1,4 @@
+#include "data.h"
 #include <iostream>
 #include <math.h>
 #include <opencv2/opencv.hpp>
@@ -8,7 +9,7 @@ using namespace cv;
 int main(int argc, char **argv) {
     char input_win[] = "input image";
     char watershed_win[] = "watershed segmentation demo";
-    Mat src = imread("test.jpg");
+    Mat src = imread(TEST1_JPG);
     // Mat src = imread("D:/kuaidi.jpg");
     if (src.empty()) {
         printf("could not load image...\n");

@@ -1,3 +1,4 @@
+#include "data.h"
 #include <iostream>
 #include <math.h>
 #include <opencv2/opencv.hpp>
@@ -12,7 +13,7 @@ const char *output_win = "image moents demo";
 RNG rng(12345);
 void Demo_Moments(int, void *);
 int main(int argc, char **argv) {
-    src = imread("test.jpg");
+    src = imread(TEST1_JPG);
     if (!src.data) {
         printf("could not load image...\n");
         return -1;
@@ -55,7 +56,7 @@ void Demo_Moments(int, void *) {
         }
         Scalar color = Scalar(rng.uniform(0, 255), rng.uniform(0, 255), rng.uniform(0, 255));
         printf("center point x : %.2f y : %.2f\n", ccs[i].x, ccs[i].y);
-        printf("contours %d area : %.2f   arc length : %.2f\n", i, contourArea(contours[i]), arcLength(contours[i], true));
+        printf("contours %u area : %.2f   arc length : %.2f\n", i, contourArea(contours[i]), arcLength(contours[i], true));
         drawContours(drawImg, contours, i, color, 2, 8, hierachy, 0, Point(0, 0));
         circle(drawImg, ccs[i], 2, color, 2, 8);
     }

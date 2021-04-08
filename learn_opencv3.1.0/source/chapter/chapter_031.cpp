@@ -1,3 +1,4 @@
+#include "data.h"
 #include <iostream>
 #include <math.h>
 #include <opencv2/opencv.hpp>
@@ -12,7 +13,7 @@ const char *output_win = "convex hull demo";
 void Threshold_Callback(int, void *);
 RNG rng(12345);
 int main(int argc, char **argv) {
-    src = imread("test.jpg");
+    src = imread(TEST1_JPG);
     if (!src.data) {
         printf("could not load image...\n");
         return -1;

@@ -1,3 +1,4 @@
+#include "data.h"
 #include <iostream>
 #include <math.h>
 #include <opencv2/opencv.hpp>
@@ -8,7 +9,7 @@ const char *OUTPUT_TITLE = "remap demo";
 
 void update_map(int);
 int main(int argc, char **argv) {
-    src = imread("test.jpg");
+    src = imread(TEST1_JPG);
     if (!src.data) {
         printf("could not load image...\n");
         return -1;

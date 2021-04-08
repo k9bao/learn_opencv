@@ -1,3 +1,4 @@
+#include "data.h"
 #include <iostream>
 #include <math.h>
 #include <opencv2/opencv.hpp>
@@ -9,7 +10,7 @@ string convertToString(double d);
 int main(int argc, char **argv) {
     Mat base, test1, test2;
     Mat hsvbase, hsvtest1, hsvtest2;
-    base = imread("test.jpg");
+    base = imread(TEST1_JPG);
     if (!base.data) {
         printf("could not load image...\n");
         return -1;
